@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <d-button type="primary">登录</d-button>
+    <d-button type="success">注册</d-button>
+    <d-button type="danger">危险</d-button>
+    <d-button type="primary" disabled>禁用</d-button>
+    <d-button type="text">文本按钮</d-button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DButton from "./components/DButton/index";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    DButton,
+  },
+};
 </script>
 
 <style>
