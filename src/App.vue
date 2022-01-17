@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <d-button type="primary">登录</d-button>
+    <d-button type="primary" @click="login">登录</d-button>
     <d-button type="success">注册</d-button>
     <d-button type="danger">危险</d-button>
     <d-button type="primary" disabled>禁用</d-button>
@@ -15,6 +15,11 @@ export default {
   name: "App",
   components: {
     DButton,
+  },
+  methods: {
+    login() {
+      alert("点击登录按钮!");
+    },
   },
 };
 </script>

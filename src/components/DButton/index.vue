@@ -3,7 +3,11 @@ export default {
   name: "DButton",
   render() {
     return (
-      <button class={this.btnClass} disabled={this.disabled}>
+      <button
+        class={this.btnClass}
+        disabled={this.disabled}
+        onClick={(e) => this.$emit("click", e)}
+      >
         {this.$slots.default}
       </button>
     );
