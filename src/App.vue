@@ -36,7 +36,7 @@ export default {
         msg: '这是一个函数式弹窗消息',
         show: true,
         //测试持续时间为0时, 是否可以手动控制
-        duration: 0
+        duration: 3000
       })
     },
     closeDialog() {
