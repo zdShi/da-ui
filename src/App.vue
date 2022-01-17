@@ -1,20 +1,28 @@
 <template>
   <div id="app">
     <d-button type="primary" @click="login">登录</d-button>
-    <d-button type="success">注册</d-button>
-    <d-button type="danger">危险</d-button>
+    <d-button type="success" @click="isShow = true">显示弹窗</d-button>
+    <d-button type="danger" @click="isShow = false">关闭弹窗</d-button>
     <d-button type="primary" disabled>禁用</d-button>
     <d-button type="text">文本按钮</d-button>
+    <d-dialog :show.sync="isShow" msg="这是一段测试文字!!" />
   </div>
 </template>
 
 <script>
 import DButton from "./components/DButton/index";
+import DDialog from "@/components/DDialog";
 
 export default {
   name: "App",
   components: {
+    DDialog,
     DButton,
+  },
+  data() {
+    return {
+      isShow: false,
+    };
   },
   methods: {
     login() {

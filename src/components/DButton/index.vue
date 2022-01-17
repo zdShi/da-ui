@@ -23,9 +23,9 @@ export default {
       },
     },
     //是否禁用
-    disable: {
+    disabled: {
       type: Boolean,
-      default: true,
+      default: false,
     },
   },
   computed: {
